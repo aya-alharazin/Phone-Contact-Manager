@@ -9,5 +9,7 @@ package app;
  * @author aya
  */
 public class Main {
-    
+    public static void main(String [] args){
+        
+    }
 }
