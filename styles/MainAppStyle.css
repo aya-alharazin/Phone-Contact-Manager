@@ -1,0 +1,117 @@
+/* ========================= */
+/* ROOT */
+/* ========================= */
+.root {
+    -fx-background-color: #f8f9fa;
+}
+
+/* ========================= */
+/* TOP CONTAINER */
+/* ========================= */
+.top-container {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* ========================= */
+/* TITLE */
+/* ========================= */
+.title-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 15 20 5 20;
+}
+
+/* ========================= */
+/* TOOLBAR */
+/* ========================= */
+.toolbar {
+    -fx-alignment: center-left;
+}
+
+/* ========================= */
+/* LABELS */
+/* ========================= */
+.label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #495057;
+}
+
+/* ========================= */
+/* COMBOBOX */
+/* ========================= */
+.combo {
+    -fx-pref-width: 150;
+}
+
+/* ========================= */
+/* CHECKBOX */
+/* ========================= */
+.checkbox {
+    -fx-font-size: 13px;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+.button {
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+/* Primary */
+.btn-primary {
+    -fx-background-color: #4dabf7;
+    -fx-text-fill: white;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #339af0;
+}
+
+/* Secondary */
+.btn-secondary {
+    -fx-background-color: #adb5bd;
+    -fx-text-fill: white;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #868e96;
+}
+
+/* Ghost */
+.btn-ghost {
+    -fx-background-color: transparent;
+    -fx-border-color: #ced4da;
+}
+
+.btn-ghost:hover {
+    -fx-background-color: #f1f3f5;
+}
+
+/* ========================= */
+/* LIST VIEW */
+/* ========================= */
+.list-view-custom {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+}
+
+/* ========================= */
+/* STATUS BAR */
+/* ========================= */
+.status-bar {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1 0 0 0;
+}
+
+.status-text {
+    -fx-font-size: 13px;
+}
+
+.status-muted {
+    -fx-font-size: 12px;
+    -fx-text-fill: #868e96;
+}

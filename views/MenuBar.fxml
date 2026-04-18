@@ -8,8 +8,10 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="29.0" prefWidth="850.0" stylesheets="@../styles/menuBar.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="controller.MenuBarController">
-    <MenuBar fx:id="menubar" prefHeight="38.0" prefWidth="850.0" styleClass="top-menu-bar">
+<AnchorPane id="AnchorPane" prefHeight="29.0" prefWidth="900.0" stylesheets="@../styles/MenuBarStyle.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuBarController">
+    <MenuBar fx:id="menubar" prefHeight="38.0" prefWidth="900.0" styleClass="top-menu-bar" AnchorPane.topAnchor="0"
+         AnchorPane.leftAnchor="0"
+         AnchorPane.rightAnchor="0">
                             <menus>
 
                                 <Menu styleClass="menu-title" text="File">

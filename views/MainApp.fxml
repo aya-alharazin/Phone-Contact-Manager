@@ -1,12 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainAppController">
-   <children>
-      <FlowPane layoutX="168.0" layoutY="46.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button fx:id="aya" layoutX="89.0" layoutY="121.0" mnemonicParsing="false" text="Button" />
-   </children>
-</AnchorPane>
+<BorderPane prefHeight="500.0" prefWidth="900.0"
+            styleClass="root"
+            stylesheets="@../styles/MainAppStyle.css"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.MainAppController">
+
+    <!-- 🔷 TOP -->
+    <top>
+        <VBox spacing="10" styleClass="top-container">
+
+            <!-- Title -->
+            <Label text="📱 Phone Contact Manager"
+                   styleClass="title-label">
+                <font>
+                    <Font name="Arial Black" size="24"/>
+                </font>
+                <padding>
+                    <Insets left="20" top="10"/>
+                </padding>
+            </Label>
+
+            <!-- Toolbar -->
+            <HBox spacing="15" styleClass="toolbar">
+                <padding>
+                    <Insets top="10" right="20" bottom="10" left="20"/>
+                </padding>
+
+                <Label text="Group:" styleClass="label"/>
+                <ComboBox fx:id="groupBy"
+                          onAction="#groupByHandle"
+                          styleClass="combo"/>
+
+                <Label text="Sort:" styleClass="label"/>
+                <ComboBox fx:id="sortBy"
+                          onAction="#sortByHandle"
+                          styleClass="combo"/>
+
+                <CheckBox fx:id="favorite"
+                          text="⭐ Favorites Only"
+                          onAction="#favoriteHandle"
+                          styleClass="checkbox"/>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <Button fx:id="addbtn"
+                        text="Add"
+                        onAction="#addbtnHandle"
+                        styleClass="btn-primary"/>
+
+                <Button fx:id="statistics"
+                        text="Statistics"
+                        onAction="#statisticsHandle"
+                        styleClass="btn-secondary"/>
+
+                <Button fx:id="refresh"
+                        text="Refresh"
+                        onAction="#refreshHandle"
+                        styleClass="btn-ghost"/>
+            </HBox>
+
+        </VBox>
+    </top>
+
+    <!-- 🔷 CENTER -->
+    <center>
+        <ListView fx:id="listView"
+                  styleClass="list-view-custom"/>
+    </center>
+
+    <!-- 🔷 BOTTOM -->
+    <bottom>
+        <HBox styleClass="status-bar">
+            <padding>
+                <Insets top="8" right="20" bottom="8" left="20"/>
+            </padding>
+
+            <Label text="Ready" styleClass="status-text"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="0 contacts" styleClass="status-muted"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
