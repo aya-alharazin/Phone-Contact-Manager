@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="29.0" prefWidth="850.0" stylesheets="@../styles/menuBar.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="controller.MenuBarController">
+    <MenuBar fx:id="menubar" prefHeight="38.0" prefWidth="850.0" styleClass="top-menu-bar">
+                            <menus>
+
+                                <Menu styleClass="menu-title" text="File">
+                                    <items>
+                                        <MenuItem fx:id="exit" onAction="#exitHandle" text="Exit" />
+                                    </items>
+                                </Menu>
+
+                                <Menu styleClass="menu-title" text="Appearance">
+                                    <items>
+
+                                        <Menu text="Font Size">
+                                            <items>
+                                                
+                                                <RadioMenuItem text="Small">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="tg" />
+                                       </toggleGroup></RadioMenuItem>
+                                                <RadioMenuItem selected="true" text="Medium" toggleGroup="$tg" />
+                                                <RadioMenuItem text="Large" toggleGroup="$tg" />
+                                            </items>
+                                        </Menu>
+
+                                        <Menu text="Font Family">
+                                            <items>
+                                                
+                                                <RadioMenuItem selected="true" text="Arial">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="tg2" />
+                                       </toggleGroup></RadioMenuItem>
+                                                <RadioMenuItem text="Times New Roman" toggleGroup="$tg2" />
+                                                <RadioMenuItem text="Sans Serif" toggleGroup="$tg2" />
+                                            </items>
+                                        </Menu>
+                              <Menu text="Font Style">
+                                 <items>
+                                    <CheckMenuItem mnemonicParsing="false" text="Bold" />
+                                    <CheckMenuItem mnemonicParsing="false" text="italic" />
+                                 </items>
+                              </Menu>
+
+                                    </items>
+                                </Menu>
+
+                                <Menu styleClass="menu-title" text="Help">
+                                    <items>
+                                        <MenuItem fx:id="about" onAction="#aboutHandle" text="About" />
+                                    </items>
+                                </Menu>
+
+                            </menus>
+                        </MenuBar>
+</AnchorPane>
