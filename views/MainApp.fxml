@@ -1,69 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="500.0" prefWidth="900.0"
-            styleClass="root"
-            stylesheets="@../styles/MainAppStyle.css"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controllers.MainAppController">
+<BorderPane prefHeight="500.0" prefWidth="900.0" styleClass="root" stylesheets="@../styles/MainAppStyle.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainAppController">
 
     <!-- 🔷 TOP -->
     <top>
         <VBox spacing="10" styleClass="top-container">
 
             <!-- Title -->
-            <Label text="📱 Phone Contact Manager"
-                   styleClass="title-label">
+            <Label styleClass="title-label" text="📱 Phone Contact Manager">
                 <font>
-                    <Font name="Arial Black" size="24"/>
+                    <Font name="Arial Black" size="24" />
                 </font>
                 <padding>
-                    <Insets left="20" top="10"/>
+                    <Insets left="20" top="10" />
                 </padding>
             </Label>
 
             <!-- Toolbar -->
             <HBox spacing="15" styleClass="toolbar">
                 <padding>
-                    <Insets top="10" right="20" bottom="10" left="20"/>
+                    <Insets bottom="10" left="20" right="20" top="10" />
                 </padding>
 
-                <Label text="Group:" styleClass="label"/>
-                <ComboBox fx:id="groupBy"
-                          onAction="#groupByHandle"
-                          styleClass="combo"/>
+                <Label styleClass="label" text="Group:" />
+                <ComboBox fx:id="groupBy" onAction="#groupByHandle" styleClass="combo" />
 
-                <Label text="Sort:" styleClass="label"/>
-                <ComboBox fx:id="sortBy"
-                          onAction="#sortByHandle"
-                          styleClass="combo"/>
+                <Label styleClass="label" text="Sort:" />
+                <ComboBox fx:id="sortBy" onAction="#sortByHandle" styleClass="combo" />
 
-                <CheckBox fx:id="favorite"
-                          text="⭐ Favorites Only"
-                          onAction="#favoriteHandle"
-                          styleClass="checkbox"/>
+                <CheckBox fx:id="favorite" onAction="#favoriteHandle" styleClass="checkbox" text="⭐ Favorites Only" />
 
-                <Region HBox.hgrow="ALWAYS"/>
+                <Region HBox.hgrow="ALWAYS" />
 
-                <Button fx:id="addbtn"
-                        text="Add"
-                        onAction="#addbtnHandle"
-                        styleClass="btn-primary"/>
+                <Button fx:id="addbtn" onAction="#addbtnHandle" styleClass="btn-primary" text="Add" />
 
-                <Button fx:id="statistics"
-                        text="Statistics"
-                        onAction="#statisticsHandle"
-                        styleClass="btn-secondary"/>
+                <Button fx:id="statistics" onAction="#statisticsHandle" styleClass="btn-secondary" text="Statistics" />
 
-                <Button fx:id="refresh"
-                        text="Refresh"
-                        onAction="#refreshHandle"
-                        styleClass="btn-ghost"/>
+                <Button fx:id="refresh" onAction="#refreshHandle" styleClass="btn-ghost" text="Refresh" />
             </HBox>
 
         </VBox>
@@ -71,20 +56,19 @@
 
     <!-- 🔷 CENTER -->
     <center>
-        <ListView fx:id="listView"
-                  styleClass="list-view-custom"/>
+        <ListView fx:id="listView" styleClass="list-view-custom" />
     </center>
 
     <!-- 🔷 BOTTOM -->
     <bottom>
         <HBox styleClass="status-bar">
             <padding>
-                <Insets top="8" right="20" bottom="8" left="20"/>
+                <Insets bottom="8" left="20" right="20" top="8" />
             </padding>
 
-            <Label text="Ready" styleClass="status-text"/>
-            <Region HBox.hgrow="ALWAYS"/>
-            <Label text="0 contacts" styleClass="status-muted"/>
+            <Label styleClass="status-text" text="Ready" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="contactNumber" styleClass="status-muted" text="0 contacts" />
         </HBox>
     </bottom>
 

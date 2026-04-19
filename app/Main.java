@@ -9,6 +9,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -27,9 +29,13 @@ public class Main extends Application{
     public void start(Stage stage) throws Exception {
         Parent p1 = FXMLLoader.load(getClass().getResource("../views/MenuBar.fxml"));
         Parent p2 = FXMLLoader.load(getClass().getResource("../views/MainApp.fxml"));
-        VBox vb = new VBox(20,p1,p2);
-        vb.setAlignment(Pos.TOP_CENTER);
-        Scene s=new Scene(vb);
+
+        BorderPane root = new BorderPane();
+
+        root.setTop(p1);     // MenuBar
+        root.setCenter(p2);  // Main UI 
+
+        Scene s = new Scene(root);
         stage.setScene(s);
         stage.setTitle("Phone contact Manager");
         stage.show();
