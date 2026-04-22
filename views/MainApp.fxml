@@ -44,11 +44,9 @@
 
                 <Region HBox.hgrow="ALWAYS" />
 
-                <Button fx:id="addbtn" onAction="#addbtnHandle" styleClass="btn-primary" text="Add" />
+                <Button fx:id="statistics" onAction="#statisticsHandle" styleClass="btn-primary" text="Statistics" />
 
-                <Button fx:id="statistics" onAction="#statisticsHandle" styleClass="btn-secondary" text="Statistics" />
-
-                <Button fx:id="refresh" onAction="#refreshHandle" styleClass="btn-ghost" text="Refresh" />
+                <Button fx:id="refresh" onAction="#refreshHandle" styleClass="btn-secondary" text="Refresh" />
             </HBox>
 
         </VBox>

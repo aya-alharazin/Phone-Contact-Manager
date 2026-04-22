@@ -10,7 +10,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -35,9 +34,9 @@ import models.Contact;
 public class MainAppController implements Initializable {
 
     @FXML
-    private ComboBox<?> groupBy;
+    private ComboBox<String> groupBy;
     @FXML
-    private ComboBox<?> sortBy;
+    private ComboBox<String> sortBy;
     @FXML
     private CheckBox favorite;
     @FXML
@@ -47,19 +46,38 @@ public class MainAppController implements Initializable {
     @FXML
     private Button refresh;
     @FXML
-    private ListView<?> listView;
+    private ListView<Contact> listView;
     @FXML
     private Label contactNumber;
-
+    Map<Integer, Contact> contactsMap = null;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        Pattern p = Pattern.compile("\\s+");
-
-        
+        groupBy.getItems().addAll("relationship","firstname");
+        sortBy.getItems().addAll("fullname");
+        try {
+            contactsMap =
+                    Files.lines(Paths.get("src/data/contacts.csv"))
+                            .skip(1) // skip header
+                            .map(line -> line.split(","))
+                            .map(data -> new Contact(
+                                    Integer.parseInt(data[0]),
+                                    data[1],
+                                    data[2],
+                                    data[3],
+                                    data[4],
+                                    Boolean.parseBoolean(data[5])
+                            ))
+                            .collect(Collectors.toMap(
+                                    Contact::getId, // key
+                                    c -> c           // value
+                            ));
+        } catch (IOException ex) {
+            System.getLogger(MainAppController.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
         
             }    
 
@@ -94,6 +112,7 @@ public class MainAppController implements Initializable {
 
     @FXML
     private void statisticsHandle(ActionEvent event) {
+        System.out.println(contactsMap);
     }
 
     @FXML

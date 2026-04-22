@@ -1,21 +1,21 @@
-id,name,phone,group,email,favorite
-1,Ahmad Ali,0599123456,Work,ahmad.ali@email.com,true
+id,name,phone,relationShip,email,favorite
+1,Mustafa Ali,0599123456,Work,mustafa.ali@email.com,true
 2,Sara Hassan,0591234567,Family,sara.hassan@email.com,true
 3,Khalid Omar,0598765432,Friends,khalid.omar@email.com,false
-4,Nour Saeed,0592345678,Work,nour.saeed@email.com,false
-5,Lina Mahmoud,0593456789,Family,lina.mahmoud@email.com,true
+4,Mustafa Saeed,0592345678,Work,mustafa.saeed@email.com,false
+5,Hana Mahmoud,0593456789,Family,hana.mahmoud@email.com,true
 6,Yousef Kareem,0594567890,Friends,yousef.kareem@email.com,false
 7,Huda Nasser,0595678901,Work,huda.nasser@email.com,true
-8,Tariq Fouad,0596789012,Others,tariq.fouad@email.com,false
+8,Mustafa Fouad,0596789012,Others,mustafa.fouad@email.com,false
 9,Reem Walid,0597890123,Family,reem.walid@email.com,true
 10,Faris Jabir,0598901234,Friends,faris.jabir@email.com,false
 11,Maya Saleh,0599012345,Work,maya.saleh@email.com,true
-12,Ziad Hamdan,0591122334,Others,ziad.hamdan@email.com,false
+12,Sara Hamdan,0591122334,Others,sara.hamdan@email.com,false
 13,Dana Qasim,0592233445,Family,dana.qasim@email.com,false
 14,Samer Issa,0593344556,Friends,samer.issa@email.com,true
 15,Hana Bilal,0594455667,Work,hana.bilal@email.com,false
 16,Omar Tawfiq,0595566778,Family,omar.tawfiq@email.com,true
 17,Rania Zuhair,0596677889,Others,rania.zuhair@email.com,false
-18,Bassam Najjar,0597788990,Friends,bassam.najjar@email.com,false
+18,Huda Najjar,0597788990,Friends,huda.najjar@email.com,false
 19,Leen Khalaf,0598899001,Work,leen.khalaf@email.com,true
 20,Mustafa Adel,0599900112,Family,mustafa.adel@email.com,false

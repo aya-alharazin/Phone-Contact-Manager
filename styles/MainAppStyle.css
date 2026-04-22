@@ -80,15 +80,7 @@
     -fx-background-color: #868e96;
 }
 
-/* Ghost */
-.btn-ghost {
-    -fx-background-color: transparent;
-    -fx-border-color: #ced4da;
-}
 
-.btn-ghost:hover {
-    -fx-background-color: #f1f3f5;
-}
 
 /* ========================= */
 /* LIST VIEW */

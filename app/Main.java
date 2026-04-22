@@ -4,6 +4,8 @@
  */
 package app;
 
+
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,31 +20,11 @@ import javafx.stage.Stage;
 public class Main extends Application{
     public static void main(String [] args){
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        launch(args);
         
     }
 
+    
     @Override
     public void start(Stage stage) throws Exception {
         Parent p1 = FXMLLoader.load(getClass().getResource("../views/MenuBar.fxml"));
@@ -57,7 +39,7 @@ public class Main extends Application{
         stage.setScene(s);
         stage.setTitle("Phone contact Manager");
         stage.show();
-
+        stage.setAlwaysOnTop(true);
 
     }
     
