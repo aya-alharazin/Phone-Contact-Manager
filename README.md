@@ -82,3 +82,15 @@ id,name,phone,email,relationship,favorite
 ## Course
 
 Advanced Java — taught by **Aya Al-Harazin**
+
+---
+
+## Lecture Video
+
+This project was built live during the following lecture. Watch it to follow along with the full explanation and code walkthrough.
+
+[![Watch the lecture](https://youtu.be/_OiU9RdNXmQ?si=d1V_WplTHd3l8OhS)](YOUR_VIDEO_LINK_HERE)
+
+> **Building a JavaFX Contacts Manager with Streams and Functional Programming | Advanced Java**
+>
+> Topics covered: project structure · reading CSV with Streams · `Collectors.toMap()` · `groupingBy()` · `Comparator.comparing()` · `.filter()` · ListView headers
