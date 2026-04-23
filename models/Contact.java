@@ -75,11 +75,17 @@ public class Contact {
 
     @Override
     public String toString() {
-        return this.name+" - "+this.phone+" - "+this.relationship+"\n";
+        if(this.id==-1)
+            return this.relationship+" - "+this.name;
+        return this.id+" - "+this.name+" - "+this.phone+" - "+this.relationship
+                        +" - "+this.email+" - "+this.favorite;
     }
             
 
-
+public static Contact createHeader(String label) {
+    Contact header = new Contact(-1, "── " + label + "", "", "", "", false);
+    return header;
+}
     
 
 
